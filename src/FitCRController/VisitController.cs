@@ -1,29 +1,24 @@
 using FitCRModels;
-using System.Globalization;
 
 namespace FitCRController
 {
     /// <summary>Controller for the visits of the users to the gym.</summary>
-    public class VisitController
+    public class VisitController : BaseController
     {
         private const int VisitsForRest = 5;
         private const string RestMessage = "Descansa esta semana: ya acumulaste 5 visitas";
 
+        private readonly NotificationController notificationController;
+        private readonly GoalController goalController;
+        private readonly BadgeController badgeController;
+
         public VisitController(InformationService informationService, NotificationController notificationController, GoalController goalController, BadgeController badgeController)
+            : base(informationService)
         {
-            this.InformationService = informationService;
-            this.NotificationController = notificationController;
-            this.GoalController = goalController;
-            this.BadgeController = badgeController;
+            this.notificationController = notificationController;
+            this.goalController = goalController;
+            this.badgeController = badgeController;
         }
-
-        public InformationService InformationService { get; set; }
-
-        public NotificationController NotificationController { get; set; }
-
-        public GoalController GoalController { get; set; }
-
-        public BadgeController BadgeController { get; set; }
 
         /// <summary>Gets the visits of a user, from the newest to the oldest.</summary>
         public List<Visit> GetVisits(string userId)
@@ -34,7 +29,7 @@ namespace FitCRController
                 .ToList();
         }
 
-        /// <summary>Registers the visit of a user for today. When the user reaches 5 visits in the same week, a notification tells him to rest.</summary>
+        /// <summary>Registers the visit of a user for today. At 5 visits in the same week, a notification tells the user to rest.</summary>
         public OperationResult RegisterVisit(string userId)
         {
             if (!this.InformationService.Users.Any(u => u.Id == userId))
@@ -48,13 +43,13 @@ namespace FitCRController
                 return OperationResult.Fail("The visit of today was already registered.");
             }
 
-            var id = this.InformationService.GenerateId("V", this.InformationService.Visits.Select(v => v.Id), 4);
-            this.InformationService.Visits.Add(new Visit(id, userId, today.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)));
+            var id = IdGenerator.Next("V", this.InformationService.Visits.Select(v => v.Id), 4);
+            this.InformationService.Visits.Add(new Visit(id, userId, CsvFormat.Date(today)));
             this.InformationService.Save(this.InformationService.Visits);
 
             this.NotifyRestIfNeeded(userId, today);
-            this.GoalController.EvaluateGoals(userId);
-            this.BadgeController.RefreshShameBadges();
+            this.goalController.EvaluateGoals(userId);
+            this.badgeController.RefreshShameBadges();
             return OperationResult.Ok("Visit registered.", id);
         }
 
@@ -67,7 +62,7 @@ namespace FitCRController
 
             if (visitsInWeek >= VisitsForRest && !alreadyNotified)
             {
-                this.NotificationController.Add(userId, RestMessage);
+                this.notificationController.Add(userId, RestMessage);
             }
         }
     }
