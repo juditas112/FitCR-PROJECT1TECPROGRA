@@ -26,7 +26,6 @@ namespace FitCRController
 
         public IDataHandler DataHandler { get; set; }
 
-        /// <summary>Gets the errors found while the files were loaded.</summary>
         public List<string> LoadErrors { get; } = new List<string>();
 
         public List<BasicUser> Users { get; set; }
@@ -57,19 +56,13 @@ namespace FitCRController
             return this.DataHandler.SaveData(Configuration.GetFilePath<T>(), data);
         }
 
-        /// <summary>Generates the next identifier for a type of element, for example U046 after U045.</summary>
-        public string GenerateId(string prefix, IEnumerable<string> existingIds, int digits)
+        /// <summary>Gets the newest measurement of a user, or null if the user has none.</summary>
+        public Measurement? GetLastMeasurement(string userId)
         {
-            var max = 0;
-            foreach (var id in existingIds)
-            {
-                if (id.StartsWith(prefix) && int.TryParse(id.Substring(prefix.Length), out var number) && number > max)
-                {
-                    max = number;
-                }
-            }
-
-            return prefix + (max + 1).ToString("D" + digits);
+            return this.Measurements
+                .Where(m => m.UserId == userId)
+                .OrderByDescending(m => m.Date)
+                .FirstOrDefault();
         }
 
         private List<T> Load<T>()
