@@ -4,14 +4,27 @@ using FitCRModels.Enums;
 namespace FitCRController
 {
     /// <summary>Controller for the classes offered by the gym.</summary>
-    public class GymClassController
+    public class GymClassController : BaseController
     {
-        public GymClassController(InformationService informationService)
+        private static readonly Dictionary<GymClassType, string> ClassNames = new Dictionary<GymClassType, string>
         {
-            this.InformationService = informationService;
+            { GymClassType.Yoga, "Yoga" },
+            { GymClassType.OpenGym, "Hora de gimnasio abierto" },
+            { GymClassType.CrossFit, "Crossfit" },
+            { GymClassType.Zumba, "Zumba" },
+            { GymClassType.Spinning, "Spinning" },
+        };
+
+        public GymClassController(InformationService informationService)
+            : base(informationService)
+        {
         }
 
-        public InformationService InformationService { get; set; }
+        /// <summary>Gets the name to show for a type of class.</summary>
+        public static string GetClassName(GymClassType type)
+        {
+            return ClassNames.TryGetValue(type, out var name) ? name : type.ToString();
+        }
 
         /// <summary>Gets all the classes, grouped by type.</summary>
         public List<GymClass> GetClasses()
@@ -22,23 +35,9 @@ namespace FitCRController
                 .ToList();
         }
 
-        /// <summary>Gets the classes that a trainer teaches.</summary>
         public List<GymClass> GetClassesOfTrainer(string trainerId)
         {
             return this.GetClasses().Where(c => c.TrainerId == trainerId).ToList();
-        }
-
-        /// <summary>Gets the name to show for a type of class.</summary>
-        public string GetClassName(GymClassType type)
-        {
-            return type switch
-            {
-                GymClassType.Yoga => "Yoga",
-                GymClassType.OpenGym => "Hora de gimnasio abierto",
-                GymClassType.CrossFit => "Crossfit",
-                GymClassType.Zumba => "Zumba",
-                _ => "Spinning",
-            };
         }
     }
 }
