@@ -3,19 +3,17 @@ using FitCRModels.Enums;
 
 namespace FitCRController
 {
-    /// <summary>Controller for the statistics, which are calculated when the user asks for them. Only the basic user can see them.</summary>
-    public class StatisticsController
+    /// <summary>Controller for the statistics, calculated when the user asks for them. Only the basic user can see them.</summary>
+    public class StatisticsController : BaseController
     {
         private const int RankingSize = 10;
 
         public StatisticsController(InformationService informationService)
+            : base(informationService)
         {
-            this.InformationService = informationService;
         }
 
-        public InformationService InformationService { get; set; }
-
-        /// <summary>Checks that the person who is logged in can see the statistics and that the range of dates is valid.</summary>
+        /// <summary>Checks that the person logged in can see the statistics and that the range of dates is valid.</summary>
         public OperationResult Validate(DateTime from, DateTime to)
         {
             if (this.InformationService.CurrentPerson?.Role != Role.BasicUser)
@@ -26,7 +24,7 @@ namespace FitCRController
             return from.Date > to.Date ? OperationResult.Fail("The first date cannot be after the last date.") : OperationResult.Ok(string.Empty);
         }
 
-        /// <summary>Gets the progress of a user in a range of dates: how his weight, body fat and muscle mass changed.</summary>
+        /// <summary>Gets how the weight, body fat and muscle mass of a user changed in a range of dates. The changes are zero if there are less than two measurements.</summary>
         public ProgressSummary GetProgress(string userId, DateTime from, DateTime to)
         {
             var summary = new ProgressSummary
@@ -43,8 +41,8 @@ namespace FitCRController
 
             if (measurements.Count >= 2)
             {
-                var first = measurements.First();
-                var last = measurements.Last();
+                var first = measurements[0];
+                var last = measurements[^1];
                 summary.HasEnoughData = true;
                 summary.WeightChange = Math.Round(last.Weight - first.Weight, 2);
                 summary.BodyFatChange = Math.Round(last.BodyFat - first.BodyFat, 2);
