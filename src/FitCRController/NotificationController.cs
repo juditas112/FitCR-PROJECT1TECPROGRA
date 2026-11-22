@@ -1,20 +1,18 @@
+using FitCRController.Abstractions;
 using FitCRModels;
 
 namespace FitCRController
 {
     /// <summary>Controller for the notifications timeline of the users and the trainers.</summary>
-    public class NotificationController
+    public class NotificationController : BaseController
     {
-        private const int ExpirationWarningDays = 7;
-        private const int MeasurementIntervalDays = 30;
-        private const int MeasurementWarningDays = 5;
+        private readonly List<ITrainerNotificationRule> rules;
 
-        public NotificationController(InformationService informationService)
+        public NotificationController(InformationService informationService, IEnumerable<ITrainerNotificationRule> rules)
+            : base(informationService)
         {
-            this.InformationService = informationService;
+            this.rules = rules.ToList();
         }
-
-        public InformationService InformationService { get; set; }
 
         /// <summary>Gets the timeline of a person, from the newest notification to the oldest.</summary>
         public List<Notification> GetNotifications(string recipientId)
@@ -33,33 +31,13 @@ namespace FitCRController
             this.InformationService.Save(this.InformationService.Notifications);
         }
 
-        /// <summary>Creates the notifications of a trainer: routines that are about to expire and measurements that are close. A notification is not created again if the same message already exists.</summary>
+        /// <summary>Creates the notices of a trainer using the rules. A notice is not created again if it already exists. Returns how many were created.</summary>
         public int GenerateTrainerNotifications(string trainerId)
         {
-            var today = DateTime.Today;
             var created = 0;
-
-            var expiring = this.InformationService.Routines
-                .Where(r => r.TrainerId == trainerId && r.EndDate.Date >= today && r.EndDate.Date <= today.AddDays(ExpirationWarningDays));
-
-            foreach (var routine in expiring)
+            foreach (var message in this.rules.SelectMany(rule => rule.GetMessages(trainerId, this.InformationService)))
             {
-                var user = this.InformationService.Users.FirstOrDefault(u => u.Id == routine.UserId);
-                if (user != null)
-                {
-                    var message = $"La rutina de {user.Name} {user.LastName} vence el {routine.EndDate:yyyy-MM-dd}. Hay que cargar la nueva.";
-                    created += this.AddIfMissing(trainerId, message);
-                }
-            }
-
-            foreach (var user in this.InformationService.Users.Where(u => u.TrainerId == trainerId))
-            {
-                var dueDate = this.GetNextMeasurementDate(user.Id);
-                if (dueDate <= today.AddDays(MeasurementWarningDays))
-                {
-                    var message = $"La medicion de {user.Name} {user.LastName} esta cerca. Le toca el {dueDate:yyyy-MM-dd}.";
-                    created += this.AddIfMissing(trainerId, message);
-                }
+                created += this.AddIfMissing(trainerId, message) ? 1 : 0;
             }
 
             if (created > 0)
@@ -70,39 +48,27 @@ namespace FitCRController
             return created;
         }
 
-        private DateTime GetNextMeasurementDate(string userId)
+        private static string CleanMessage(string message)
         {
-            var last = this.InformationService.Measurements
-                .Where(m => m.UserId == userId)
-                .Select(m => (DateTime?)m.Date)
-                .Max();
-
-            return last.HasValue ? last.Value.Date.AddDays(MeasurementIntervalDays) : DateTime.Today;
+            return message.Replace(',', ';');
         }
 
-        private int AddIfMissing(string recipientId, string message)
+        private bool AddIfMissing(string recipientId, string message)
         {
-            message = CleanMessage(message);
-            var exists = this.InformationService.Notifications.Any(n => n.RecipientId == recipientId && n.Message == message);
-            if (exists)
+            var clean = CleanMessage(message);
+            if (this.InformationService.Notifications.Any(n => n.RecipientId == recipientId && n.Message == clean))
             {
-                return 0;
+                return false;
             }
 
-            this.AddWithoutSaving(recipientId, message);
-            return 1;
+            this.AddWithoutSaving(recipientId, clean);
+            return true;
         }
 
         private void AddWithoutSaving(string recipientId, string message)
         {
-            var id = this.InformationService.GenerateId("N", this.InformationService.Notifications.Select(n => n.Id), 4);
-            var date = DateTime.Today.ToString("yyyy-MM-dd");
-            this.InformationService.Notifications.Add(new Notification(id, recipientId, CleanMessage(message), date));
-        }
-
-        private static string CleanMessage(string message)
-        {
-            return message.Replace(',', ';');
+            var id = IdGenerator.Next("N", this.InformationService.Notifications.Select(n => n.Id), 4);
+            this.InformationService.Notifications.Add(new Notification(id, recipientId, CleanMessage(message), CsvFormat.Date(DateTime.Today)));
         }
     }
 }
