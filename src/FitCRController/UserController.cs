@@ -1,44 +1,35 @@
 using FitCRModels;
 using FitCRModels.Enums;
-using System.Globalization;
 
 namespace FitCRController
 {
-    /// <summary>Controller for the registration and the profile of the users, and for the trainers information.</summary>
-    public class UserController
+    /// <summary>Controller for the registration and the profile of the users, and for the information of the trainers.</summary>
+    public class UserController : BaseController
     {
         private const int MinimumAge = 12;
         private const int MaximumAge = 100;
 
+        private readonly NotificationController notificationController;
+
         public UserController(InformationService informationService, NotificationController notificationController)
+            : base(informationService)
         {
-            this.InformationService = informationService;
-            this.NotificationController = notificationController;
+            this.notificationController = notificationController;
         }
 
-        public InformationService InformationService { get; set; }
-
-        public NotificationController NotificationController { get; set; }
-
-        /// <summary>Registers a new basic user. The trainer assigned is the first trainer of the gym.</summary>
+        /// <summary>Registers a new basic user. The trainer assigned is the first trainer of the gym. If it succeded, the new identifier is in the result.</summary>
         public OperationResult Register(string name, string lastName, string email, string number, string username, string password, DateTime birthDate, double weight, double height)
         {
-            var error = this.ValidateRegistration(name, lastName, email, number, username, password, birthDate);
+            var error = this.ValidateRegistration(name, lastName, email, number, username, password, birthDate) ?? ValidateBody(weight, height);
             if (error != null)
             {
                 return OperationResult.Fail(error);
             }
 
-            error = this.ValidateBody(weight, height);
-            if (error != null)
-            {
-                return OperationResult.Fail(error);
-            }
-
-            var id = this.InformationService.GenerateId("U", this.InformationService.Users.Select(u => u.Id), 3);
+            var id = IdGenerator.Next("U", this.InformationService.Users.Select(u => u.Id), 3);
             var trainer = this.InformationService.Trainers.FirstOrDefault(t => t.TrainerType == TrainerType.Gym);
 
-            var user = new BasicUser(
+            this.InformationService.Users.Add(new BasicUser(
                 id,
                 name.Trim(),
                 lastName.Trim(),
@@ -46,15 +37,14 @@ namespace FitCRController
                 number.Trim(),
                 username.Trim(),
                 password,
-                ((int)Role.BasicUser).ToString(),
-                birthDate.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture),
-                weight.ToString(CultureInfo.InvariantCulture),
-                height.ToString(CultureInfo.InvariantCulture),
-                trainer?.Id ?? string.Empty);
+                CsvFormat.Code(Role.BasicUser),
+                CsvFormat.Date(birthDate),
+                CsvFormat.Number(weight),
+                CsvFormat.Number(height),
+                trainer?.Id ?? string.Empty));
 
-            this.InformationService.Users.Add(user);
             this.InformationService.Save(this.InformationService.Users);
-            this.NotificationController.Add(id, "Bienvenido a Fit.CR. Ya puedes empezar a registrar tus visitas.");
+            this.notificationController.Add(id, "Bienvenido a Fit.CR. Ya puedes empezar a registrar tus visitas.");
             return OperationResult.Ok("User registered.", id);
         }
 
@@ -67,7 +57,7 @@ namespace FitCRController
                 return OperationResult.Fail("The user does not exist.");
             }
 
-            var error = this.ValidateBody(weight, height);
+            var error = ValidateBody(weight, height);
             if (error != null)
             {
                 return OperationResult.Fail(error);
@@ -79,19 +69,17 @@ namespace FitCRController
             return OperationResult.Ok("Profile updated.");
         }
 
-        /// <summary>Gets a user.</summary>
         public BasicUser? GetUser(string userId)
         {
             return this.InformationService.Users.FirstOrDefault(u => u.Id == userId);
         }
 
-        /// <summary>Gets a trainer.</summary>
         public Trainer? GetTrainer(string trainerId)
         {
             return this.InformationService.Trainers.FirstOrDefault(t => t.Id == trainerId);
         }
 
-        /// <summary>Gets the users that a trainer takes care of.</summary>
+        /// <summary>Gets the users that a trainer takes care of, sorted by name.</summary>
         public List<BasicUser> GetUsersOfTrainer(string trainerId)
         {
             return this.InformationService.Users
@@ -99,6 +87,35 @@ namespace FitCRController
                 .OrderBy(u => u.Name)
                 .ThenBy(u => u.LastName)
                 .ToList();
+        }
+
+        private static string? ValidateBody(double weight, double height)
+        {
+            return Validation.WeightError(weight) ?? Validation.HeightError(height);
+        }
+
+        private static bool IsValidNumber(string number)
+        {
+            try
+            {
+                _ = new PhoneNumber(number);
+                return true;
+            }
+            catch (Exception ex) when (ex is FormatException || ex is OverflowException || ex is IndexOutOfRangeException)
+            {
+                return false;
+            }
+        }
+
+        private static string? ValidateAge(DateTime birthDate)
+        {
+            var age = DateTime.Today.Year - birthDate.Year;
+            if (birthDate.Date > DateTime.Today.AddYears(-age))
+            {
+                age--;
+            }
+
+            return age < MinimumAge || age > MaximumAge ? $"The age must be between {MinimumAge} and {MaximumAge} years." : null;
         }
 
         private string? ValidateRegistration(string name, string lastName, string email, string number, string username, string password, DateTime birthDate)
@@ -109,7 +126,7 @@ namespace FitCRController
                 return "All the fields are required.";
             }
 
-            if (texts.Any(t => t.Contains(',')))
+            if (Validation.HasComma(texts))
             {
                 return "The fields cannot contain commas.";
             }
@@ -134,47 +151,13 @@ namespace FitCRController
                 return "The username is already taken.";
             }
 
-            if (!this.IsValidNumber(number))
-            {
-                return "The phone number is not valid.";
-            }
-
-            var age = DateTime.Today.Year - birthDate.Year;
-            if (birthDate.Date > DateTime.Today.AddYears(-age))
-            {
-                age--;
-            }
-
-            return age < MinimumAge || age > MaximumAge ? $"The age must be between {MinimumAge} and {MaximumAge} years." : null;
-        }
-
-        private string? ValidateBody(double weight, double height)
-        {
-            if (weight < 20 || weight > 300)
-            {
-                return "The weight must be between 20 and 300 kg.";
-            }
-
-            return height < 1.0 || height > 2.5 ? "The height must be between 1.0 and 2.5 meters." : null;
+            return IsValidNumber(number) ? ValidateAge(birthDate) : "The phone number is not valid.";
         }
 
         private bool UsernameExists(string username)
         {
             return this.InformationService.Users.Any(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase)) ||
                    this.InformationService.Trainers.Any(t => t.Username.Equals(username, StringComparison.OrdinalIgnoreCase));
-        }
-
-        private bool IsValidNumber(string number)
-        {
-            try
-            {
-                _ = new PhoneNumber(number);
-                return true;
-            }
-            catch (Exception ex) when (ex is FormatException || ex is OverflowException || ex is IndexOutOfRangeException)
-            {
-                return false;
-            }
         }
     }
 }
