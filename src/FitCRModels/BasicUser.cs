@@ -20,7 +20,7 @@ namespace FitCRModels
 
         public double Height { get; set; }
 
-        public string TrainerId { get; set; } = string.Empty;
+        public string TrainerId { get; set; }
 
         public int Age
         {

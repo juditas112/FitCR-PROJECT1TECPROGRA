@@ -15,11 +15,11 @@ namespace FitCRModels
             this.NewWeight = double.Parse(newWeight, CultureInfo.InvariantCulture);
         }
 
-        public string Id { get; set; } = string.Empty;
+        public string Id { get; set; }
 
-        public string RoutineId { get; set; } = string.Empty;
+        public string RoutineId { get; set; }
 
-        public string ExerciseId { get; set; } = string.Empty;
+        public string ExerciseId { get; set; }
 
         public DateTime Date { get; set; }
 

@@ -15,13 +15,13 @@ namespace FitCRModels
             this.Date = DateTime.Parse(date, CultureInfo.InvariantCulture);
         }
 
-        public string Id { get; set; } = string.Empty;
+        public string Id { get; set; }
 
-        public string UserId { get; set; } = string.Empty;
+        public string UserId { get; set; }
 
         public BadgeType BadgeType { get; set; }
 
-        public string Name { get; set; } = string.Empty;
+        public string Name { get; set; }
 
         public DateTime Date { get; set; }
 

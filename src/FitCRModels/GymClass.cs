@@ -14,13 +14,13 @@ namespace FitCRModels
             this.TrainerId = trainerId;
         }
 
-        public string Id { get; set; } = string.Empty;
+        public string Id { get; set; }
 
         public GymClassType ClassType { get; set; }
 
-        public string Schedule { get; set; } = string.Empty;
+        public string Schedule { get; set; }
 
-        public string TrainerId { get; set; } = string.Empty;
+        public string TrainerId { get; set; }
 
         public override string ToString()
         {

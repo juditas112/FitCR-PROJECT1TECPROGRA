@@ -16,9 +16,9 @@ namespace FitCRModels
             this.IsAchieved = bool.Parse(isAchieved);
         }
 
-        public string Id { get; set; } = string.Empty;
+        public string Id { get; set; }
 
-        public string UserId { get; set; } = string.Empty;
+        public string UserId { get; set; }
 
         public GoalType GoalType { get; set; }
 

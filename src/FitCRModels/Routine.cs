@@ -14,11 +14,11 @@ namespace FitCRModels
             this.EndDate = DateTime.Parse(endDate, CultureInfo.InvariantCulture);
         }
 
-        public string Id { get; set; } = string.Empty;
+        public string Id { get; set; }
 
-        public string UserId { get; set; } = string.Empty;
+        public string UserId { get; set; }
 
-        public string TrainerId { get; set; } = string.Empty;
+        public string TrainerId { get; set; }
 
         public DateTime StartDate { get; set; }
 

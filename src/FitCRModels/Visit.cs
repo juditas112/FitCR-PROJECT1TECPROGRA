@@ -12,9 +12,9 @@ namespace FitCRModels
             this.Date = DateTime.Parse(date, CultureInfo.InvariantCulture);
         }
 
-        public string Id { get; set; } = string.Empty;
+        public string Id { get; set; }
 
-        public string UserId { get; set; } = string.Empty;
+        public string UserId { get; set; }
 
         public DateTime Date { get; set; }
 
