@@ -1,0 +1,46 @@
+id,name,lastName,email,number,username,password,role,birthDate,weight,height,trainerId
+U001,Natalia,Araya Calderon,natalia.araya1@fitcr.com,65419851,user001,pass001,0,1990-10-23,80.9,1.85,T027
+U002,Ricardo,Morales Araya,ricardo.morales2@fitcr.com,79712997,user002,pass002,0,1991-08-16,77.8,1.74,T034
+U003,Fernanda,Villalobos Jimenez,fernanda.villalobos3@fitcr.com,64881154,user003,pass003,0,1970-03-22,107.3,1.9,T042
+U004,Gabriela,Castro Gonzalez,gabriela.castro4@fitcr.com,84061027,user004,pass004,0,1971-03-22,72.4,1.57,T036
+U005,Stephanie,Hernandez Segura,stephanie.hernandez5@fitcr.com,84632979,user005,pass005,0,1974-12-03,88.0,1.63,T037
+U006,Cristian,Campos Hernandez,cristian.campos6@fitcr.com,75497983,user006,pass006,0,2000-01-26,84.2,1.55,T017
+U007,Diego,Castro Araya,diego.castro7@fitcr.com,62013781,user007,pass007,0,2004-01-20,72.7,1.86,T042
+U008,Bryan,Jimenez Zuniga,bryan.jimenez8@fitcr.com,75643699,user008,pass008,0,1996-05-19,100.6,1.63,T021
+U009,Mario,Quesada Quesada,mario.quesada9@fitcr.com,+506 61232708,user009,pass009,0,1988-06-19,102.3,1.91,T017
+U010,Daniel,Rojas Mora,daniel.rojas10@fitcr.com,64946427,user010,pass010,0,1971-01-12,70.0,1.54,T036
+U011,Roberto,Barrantes Leiva,roberto.barrantes11@fitcr.com,76284394,user011,pass011,0,2004-12-23,78.5,1.78,T040
+U012,Carlos,Barrantes Ramirez,carlos.barrantes12@fitcr.com,74617775,user012,pass012,0,1996-08-25,78.8,1.94,T008
+U013,Stephanie,Calderon Leiva,stephanie.calderon13@fitcr.com,85220771,user013,pass013,0,1987-06-15,68.9,1.87,T004
+U014,Lucia,Fallas Castro,lucia.fallas14@fitcr.com,65721627,user014,pass014,0,2001-03-10,71.2,1.83,T008
+U015,Natalia,Navarro Castro,natalia.navarro15@fitcr.com,71340075,user015,pass015,0,1994-04-27,107.5,1.59,T004
+U016,Cristian,Jimenez Araya,cristian.jimenez16@fitcr.com,83058316,user016,pass016,0,1975-04-22,54.2,1.74,T039
+U017,Jimena,Arce Salazar,jimena.arce17@fitcr.com,68126459,user017,pass017,0,1995-12-08,59.3,1.69,T025
+U018,Paola,Navarro Castro,paola.navarro18@fitcr.com,+506 84683694,user018,pass018,0,2004-10-05,59.3,1.74,T035
+U019,Stephanie,Gonzalez Ramirez,stephanie.gonzalez19@fitcr.com,73477715,user019,pass019,0,1980-03-28,53.4,1.62,T031
+U020,Daniel,Quesada Alvarado,daniel.quesada20@fitcr.com,62500668,user020,pass020,0,1978-01-16,84.1,1.79,T033
+U021,Kevin,Alvarado Arce,kevin.alvarado21@fitcr.com,86326731,user021,pass021,0,1972-07-10,90.2,1.51,T016
+U022,Felipe,Mora Chaves,felipe.mora22@fitcr.com,89533231,user022,pass022,0,1976-10-07,105.8,1.91,T026
+U023,Rebeca,Calderon Segura,rebeca.calderon23@fitcr.com,65626517,user023,pass023,0,1985-06-01,102.0,1.67,T030
+U024,Bryan,Morales Gonzalez,bryan.morales24@fitcr.com,76237740,user024,pass024,0,1978-06-06,61.2,1.68,T032
+U025,Jose,Calderon Villalobos,jose.calderon25@fitcr.com,87850588,user025,pass025,0,2005-09-05,54.2,1.58,T020
+U026,Karla,Gonzalez Montero,karla.gonzalez26@fitcr.com,73314594,user026,pass026,0,2002-01-22,94.9,1.95,T002
+U027,Gustavo,Campos Leiva,gustavo.campos27@fitcr.com,+506 86145748,user027,pass027,0,1995-09-08,54.6,1.68,T035
+U028,Andrea,Segura Arce,andrea.segura28@fitcr.com,83651537,user028,pass028,0,1992-10-27,58.1,1.56,T025
+U029,Gabriela,Gonzalez Quesada,gabriela.gonzalez29@fitcr.com,71697740,user029,pass029,0,2003-01-28,86.4,1.85,T011
+U030,Ricardo,Salazar Gonzalez,ricardo.salazar30@fitcr.com,76993212,user030,pass030,0,1976-01-05,108.4,1.58,T041
+U031,Jose,Leiva Ulate,jose.leiva31@fitcr.com,89053266,user031,pass031,0,1988-12-16,72.6,1.85,T035
+U032,Mario,Montero Zuniga,mario.montero32@fitcr.com,64013575,user032,pass032,0,1984-02-12,83.3,1.57,T008
+U033,Mauricio,Cordero Obando,mauricio.cordero33@fitcr.com,81033431,user033,pass033,0,1986-10-20,55.7,1.64,T035
+U034,Valeria,Ulate Ulate,valeria.ulate34@fitcr.com,63122728,user034,pass034,0,1974-10-08,109.1,1.72,T005
+U035,Alonso,Quesada Ulate,alonso.quesada35@fitcr.com,72972144,user035,pass035,0,1985-08-08,79.5,1.72,T036
+U036,Andrea,Chaves Villalobos,andrea.chaves36@fitcr.com,+506 78649300,user036,pass036,0,1996-04-03,72.0,1.53,T006
+U037,Tatiana,Navarro Salazar,tatiana.navarro37@fitcr.com,74792454,user037,pass037,0,1977-07-21,70.9,1.73,T022
+U038,Marco,Barrantes Obando,marco.barrantes38@fitcr.com,89274426,user038,pass038,0,1988-01-30,70.2,1.59,T030
+U039,Esteban,Leiva Fallas,esteban.leiva39@fitcr.com,76873777,user039,pass039,0,1988-05-18,100.2,1.77,T014
+U040,Valeria,Morales Montero,valeria.morales40@fitcr.com,83140504,user040,pass040,0,1989-05-07,67.5,1.88,T021
+U041,Fernanda,Villalobos Leiva,fernanda.villalobos41@fitcr.com,75422858,user041,pass041,0,1976-07-09,83.6,1.62,T022
+U042,Valeria,Gonzalez Navarro,valeria.gonzalez42@fitcr.com,65494784,user042,pass042,0,1983-03-02,85.3,1.78,T026
+U043,Maria,Gonzalez Fallas,maria.gonzalez43@fitcr.com,77872957,user043,pass043,0,1985-02-09,57.5,1.85,T032
+U044,Stephanie,Leiva Arce,stephanie.leiva44@fitcr.com,89668625,user044,pass044,0,1979-06-02,76.6,1.79,T004
+U045,Melissa,Montero Araya,melissa.montero45@fitcr.com,+506 65480437,user045,pass045,0,1995-01-27,92.7,1.56,T038

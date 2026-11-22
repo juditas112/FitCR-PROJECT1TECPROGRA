@@ -1,0 +1,61 @@
+id,userId,badgeType,name,date
+B001,U001,0,Meta de musculatura cumplida,2026-11-01
+B002,U004,0,Meta de grasa cumplida,2026-11-06
+B003,U005,0,Meta de visitas cumplida,2026-11-06
+B004,U006,0,Meta de musculatura cumplida,2026-11-04
+B005,U010,0,Meta de visitas cumplida,2026-11-05
+B006,U011,0,Meta de musculatura cumplida,2026-11-13
+B007,U011,0,Meta de musculatura cumplida,2026-11-09
+B008,U012,0,Meta de grasa cumplida,2026-11-06
+B009,U013,0,Meta de visitas cumplida,2026-11-04
+B010,U016,0,Meta de grasa cumplida,2026-11-09
+B011,U017,0,Meta de visitas cumplida,2026-11-13
+B012,U020,0,Meta de musculatura cumplida,2026-11-12
+B013,U023,0,Meta de grasa cumplida,2026-11-11
+B014,U026,0,Meta de visitas cumplida,2026-11-13
+B015,U030,0,Meta de visitas cumplida,2026-11-05
+B016,U031,0,Meta de grasa cumplida,2026-11-11
+B017,U032,0,Meta de visitas cumplida,2026-11-07
+B018,U035,0,Meta de visitas cumplida,2026-11-04
+B019,U037,0,Meta de visitas cumplida,2026-11-05
+B020,U037,0,Meta de grasa cumplida,2026-11-10
+B021,U038,0,Meta de musculatura cumplida,2026-11-04
+B022,U039,0,Meta de visitas cumplida,2026-11-09
+B023,U041,0,Meta de grasa cumplida,2026-11-09
+B024,U042,0,Meta de grasa cumplida,2026-11-13
+B025,U035,1,Top 10 con menos visitas,2026-11-13
+B026,U036,1,Top 10 con menos visitas,2026-11-13
+B027,U041,1,Top 10 con menos visitas,2026-11-13
+B028,U045,1,Top 10 con menos visitas,2026-11-13
+B029,U034,1,Top 10 con menos visitas,2026-11-13
+B030,U039,1,Top 10 con menos visitas,2026-11-13
+B031,U042,1,Top 10 con menos visitas,2026-11-13
+B032,U037,1,Top 10 con menos visitas,2026-11-13
+B033,U038,1,Top 10 con menos visitas,2026-11-13
+B034,U043,1,Top 10 con menos visitas,2026-11-13
+B035,U014,0,Constancia en el gimnasio,2026-11-13
+B036,U025,0,Constancia en el gimnasio,2026-11-13
+B037,U003,0,Constancia en el gimnasio,2026-11-13
+B038,U007,0,Constancia en el gimnasio,2026-11-13
+B039,U004,0,Constancia en el gimnasio,2026-11-13
+B040,U005,0,Constancia en el gimnasio,2026-11-13
+B041,U008,0,Constancia en el gimnasio,2026-11-13
+B042,U002,0,Constancia en el gimnasio,2026-11-13
+B043,U006,0,Constancia en el gimnasio,2026-11-13
+B044,U001,0,Constancia en el gimnasio,2026-11-13
+B045,U029,1,Sin agregar progreso,2026-11-10
+B046,U011,1,Sin agregar progreso,2026-11-10
+B047,U025,1,Sin agregar progreso,2026-11-10
+B048,U024,1,Sin agregar progreso,2026-11-10
+B049,U002,1,Sin agregar progreso,2026-11-10
+B050,U015,1,Sin agregar progreso,2026-11-10
+B051,U042,1,Sin agregar progreso,2026-11-10
+B052,U007,1,Sin agregar progreso,2026-11-10
+B053,U007,1,Objetivo no cumplido,2026-11-12
+B054,U036,1,Objetivo no cumplido,2026-11-12
+B055,U027,1,Objetivo no cumplido,2026-11-12
+B056,U020,1,Objetivo no cumplido,2026-11-12
+B057,U025,1,Objetivo no cumplido,2026-11-12
+B058,U044,1,Objetivo no cumplido,2026-11-12
+B059,U016,1,Objetivo no cumplido,2026-11-12
+B060,U018,1,Objetivo no cumplido,2026-11-12

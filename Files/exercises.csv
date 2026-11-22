@@ -1,0 +1,694 @@
+id,routineId,name,sets,repetitions,weight
+E0001,R001,Extension de triceps,5,8,52.5
+E0002,R001,Press militar,4,12,27.5
+E0003,R001,Curl de biceps,3,8,50
+E0004,R002,Extension de triceps,5,15,5
+E0005,R002,Press militar,3,15,15
+E0006,R002,Fondos,4,10,50
+E0007,R003,Extension de triceps,4,10,52.5
+E0008,R003,Press militar,4,15,50
+E0009,R003,Jalon al pecho,3,10,10
+E0010,R004,Extension de triceps,5,8,2.5
+E0011,R004,Prensa de pierna,4,10,12.5
+E0012,R004,Hip thrust,5,12,12.5
+E0013,R005,Peso muerto,3,10,12.5
+E0014,R005,Prensa de pierna,5,15,50
+E0015,R005,Jalon al pecho,4,10,52.5
+E0016,R006,Fondos,5,15,12.5
+E0017,R006,Press de banca,3,8,40
+E0018,R006,Curl de biceps,3,8,27.5
+E0019,R007,Sentadilla,3,8,32.5
+E0020,R007,Peso muerto,3,10,15
+E0021,R007,Fondos,5,15,17.5
+E0022,R008,Peso muerto,5,15,42.5
+E0023,R008,Fondos,5,10,22.5
+E0024,R008,Zancadas,5,15,5
+E0025,R009,Jalon al pecho,3,12,60
+E0026,R009,Remo con barra,3,10,17.5
+E0027,R009,Press de banca,3,15,0
+E0028,R010,Hip thrust,4,12,30
+E0029,R010,Prensa de pierna,4,15,22.5
+E0030,R010,Press militar,4,10,5
+E0031,R011,Fondos,4,15,60
+E0032,R011,Remo con barra,5,12,20
+E0033,R011,Dominadas,4,15,25
+E0034,R012,Sentadilla,3,8,52.5
+E0035,R012,Press de banca,5,8,32.5
+E0036,R012,Plancha,5,15,50
+E0037,R013,Peso muerto,3,8,30
+E0038,R013,Dominadas,3,12,0
+E0039,R013,Prensa de pierna,5,8,60
+E0040,R014,Jalon al pecho,3,12,40
+E0041,R014,Dominadas,4,15,17.5
+E0042,R014,Prensa de pierna,3,12,30
+E0043,R015,Curl de biceps,3,15,15
+E0044,R015,Remo con barra,5,15,62.5
+E0045,R015,Plancha,4,8,40
+E0046,R016,Zancadas,5,15,12.5
+E0047,R016,Jalon al pecho,3,12,22.5
+E0048,R016,Sentadilla,5,8,25
+E0049,R017,Plancha,5,8,50
+E0050,R017,Dominadas,4,15,5
+E0051,R017,Remo con barra,4,15,0
+E0052,R018,Remo con barra,3,12,25
+E0053,R018,Sentadilla,4,10,0
+E0054,R018,Press militar,5,8,40
+E0055,R019,Dominadas,5,8,17.5
+E0056,R019,Jalon al pecho,3,12,5
+E0057,R019,Curl de biceps,5,8,20
+E0058,R020,Sentadilla,5,8,42.5
+E0059,R020,Press militar,3,10,50
+E0060,R020,Plancha,4,8,52.5
+E0061,R021,Remo con barra,4,8,15
+E0062,R021,Fondos,3,15,30
+E0063,R021,Zancadas,4,10,10
+E0064,R022,Peso muerto,5,12,32.5
+E0065,R022,Fondos,5,10,40
+E0066,R022,Remo con barra,3,12,5
+E0067,R023,Fondos,4,10,25
+E0068,R023,Extension de triceps,4,8,10
+E0069,R023,Remo con barra,4,8,42.5
+E0070,R024,Hip thrust,5,12,5
+E0071,R024,Plancha,5,12,15
+E0072,R024,Dominadas,4,10,20
+E0073,R025,Press militar,3,8,25
+E0074,R025,Jalon al pecho,5,15,60
+E0075,R025,Fondos,3,15,12.5
+E0076,R026,Press de banca,3,12,12.5
+E0077,R026,Prensa de pierna,4,8,42.5
+E0078,R026,Peso muerto,3,15,2.5
+E0079,R027,Plancha,3,12,40
+E0080,R027,Press de banca,4,12,42.5
+E0081,R027,Extension de triceps,5,12,22.5
+E0082,R028,Jalon al pecho,4,12,25
+E0083,R028,Plancha,3,8,15
+E0084,R028,Zancadas,5,12,30
+E0085,R029,Dominadas,3,15,12.5
+E0086,R029,Peso muerto,5,15,17.5
+E0087,R029,Press de banca,5,15,22.5
+E0088,R030,Prensa de pierna,3,12,0
+E0089,R030,Curl de biceps,4,10,30
+E0090,R030,Remo con barra,4,15,40
+E0091,R031,Plancha,3,12,52.5
+E0092,R031,Press militar,4,10,52.5
+E0093,R031,Jalon al pecho,5,12,27.5
+E0094,R032,Fondos,4,15,32.5
+E0095,R032,Remo con barra,3,15,25
+E0096,R032,Sentadilla,3,10,15
+E0097,R033,Curl de biceps,4,10,30
+E0098,R033,Plancha,4,8,50
+E0099,R033,Zancadas,3,8,17.5
+E0100,R034,Press de banca,4,8,30
+E0101,R034,Curl de biceps,4,12,0
+E0102,R034,Plancha,3,12,12.5
+E0103,R035,Press de banca,3,15,25
+E0104,R035,Hip thrust,3,8,25
+E0105,R035,Prensa de pierna,3,15,40
+E0106,R036,Fondos,3,8,2.5
+E0107,R036,Extension de triceps,4,8,42.5
+E0108,R036,Zancadas,3,15,42.5
+E0109,R037,Jalon al pecho,4,10,30
+E0110,R037,Press de banca,4,10,30
+E0111,R037,Sentadilla,4,10,0
+E0112,R038,Plancha,4,15,5
+E0113,R038,Prensa de pierna,4,8,30
+E0114,R038,Press militar,5,12,27.5
+E0115,R039,Prensa de pierna,4,10,60
+E0116,R039,Plancha,5,15,20
+E0117,R039,Extension de triceps,5,12,52.5
+E0118,R040,Press militar,4,10,62.5
+E0119,R040,Zancadas,3,12,52.5
+E0120,R040,Jalon al pecho,4,12,5
+E0121,R041,Plancha,5,12,7.5
+E0122,R041,Prensa de pierna,4,15,62.5
+E0123,R041,Dominadas,5,15,7.5
+E0124,R042,Prensa de pierna,4,12,62.5
+E0125,R042,Zancadas,4,8,27.5
+E0126,R042,Hip thrust,5,12,22.5
+E0127,R043,Sentadilla,4,8,60
+E0128,R043,Dominadas,5,12,50
+E0129,R043,Zancadas,3,12,32.5
+E0130,R044,Zancadas,4,8,15
+E0131,R044,Press militar,3,8,15
+E0132,R044,Jalon al pecho,3,12,62.5
+E0133,R045,Press de banca,5,8,20
+E0134,R045,Hip thrust,3,15,15
+E0135,R045,Plancha,5,8,5
+E0136,R046,Jalon al pecho,3,10,40
+E0137,R046,Prensa de pierna,4,15,27.5
+E0138,R046,Zancadas,3,8,32.5
+E0139,R047,Peso muerto,5,10,62.5
+E0140,R047,Press militar,5,8,7.5
+E0141,R047,Hip thrust,5,15,42.5
+E0142,R048,Hip thrust,3,12,5
+E0143,R048,Prensa de pierna,4,10,22.5
+E0144,R048,Peso muerto,5,10,17.5
+E0145,R049,Peso muerto,4,8,5
+E0146,R049,Extension de triceps,4,15,7.5
+E0147,R049,Jalon al pecho,4,8,2.5
+E0148,R050,Plancha,4,10,17.5
+E0149,R050,Hip thrust,4,8,20
+E0150,R050,Press de banca,5,8,17.5
+E0151,R051,Fondos,3,10,17.5
+E0152,R051,Dominadas,5,8,32.5
+E0153,R051,Peso muerto,5,15,25
+E0154,R052,Peso muerto,3,10,62.5
+E0155,R052,Dominadas,5,8,52.5
+E0156,R052,Curl de biceps,3,12,40
+E0157,R053,Press militar,4,15,5
+E0158,R053,Peso muerto,4,8,22.5
+E0159,R053,Prensa de pierna,3,15,27.5
+E0160,R054,Press militar,3,8,22.5
+E0161,R054,Peso muerto,3,10,15
+E0162,R054,Jalon al pecho,3,12,15
+E0163,R055,Hip thrust,4,15,52.5
+E0164,R055,Dominadas,5,12,50
+E0165,R055,Press de banca,3,12,62.5
+E0166,R056,Hip thrust,4,8,27.5
+E0167,R056,Curl de biceps,3,12,52.5
+E0168,R056,Jalon al pecho,4,8,2.5
+E0169,R057,Sentadilla,3,15,12.5
+E0170,R057,Hip thrust,4,8,25
+E0171,R057,Plancha,4,8,17.5
+E0172,R058,Remo con barra,4,10,40
+E0173,R058,Hip thrust,3,8,52.5
+E0174,R058,Prensa de pierna,4,10,30
+E0175,R059,Prensa de pierna,5,12,12.5
+E0176,R059,Remo con barra,4,12,32.5
+E0177,R059,Jalon al pecho,5,15,15
+E0178,R060,Zancadas,3,15,22.5
+E0179,R060,Prensa de pierna,5,10,25
+E0180,R060,Dominadas,3,12,10
+E0181,R061,Curl de biceps,5,10,22.5
+E0182,R061,Peso muerto,4,15,2.5
+E0183,R061,Remo con barra,5,12,5
+E0184,R062,Extension de triceps,5,8,32.5
+E0185,R062,Curl de biceps,5,12,30
+E0186,R062,Dominadas,3,12,5
+E0187,R063,Fondos,4,12,17.5
+E0188,R063,Peso muerto,5,12,2.5
+E0189,R063,Remo con barra,3,12,42.5
+E0190,R064,Curl de biceps,5,8,50
+E0191,R064,Fondos,4,12,30
+E0192,R064,Jalon al pecho,3,15,7.5
+E0193,R065,Zancadas,5,8,50
+E0194,R065,Extension de triceps,3,8,0
+E0195,R065,Fondos,5,12,10
+E0196,R066,Sentadilla,3,8,40
+E0197,R066,Curl de biceps,3,10,40
+E0198,R066,Prensa de pierna,3,8,27.5
+E0199,R067,Sentadilla,5,15,40
+E0200,R067,Press militar,4,15,5
+E0201,R067,Fondos,4,15,17.5
+E0202,R068,Press de banca,3,8,15
+E0203,R068,Prensa de pierna,3,8,20
+E0204,R068,Sentadilla,5,10,0
+E0205,R069,Press militar,3,15,7.5
+E0206,R069,Peso muerto,4,8,27.5
+E0207,R069,Zancadas,3,10,0
+E0208,R070,Peso muerto,3,8,12.5
+E0209,R070,Zancadas,4,8,27.5
+E0210,R070,Curl de biceps,5,10,60
+E0211,R071,Remo con barra,3,10,17.5
+E0212,R071,Plancha,3,10,40
+E0213,R071,Fondos,5,15,7.5
+E0214,R072,Press de banca,5,8,22.5
+E0215,R072,Peso muerto,3,15,42.5
+E0216,R072,Plancha,4,12,52.5
+E0217,R073,Sentadilla,3,12,7.5
+E0218,R073,Zancadas,4,15,50
+E0219,R073,Extension de triceps,4,15,17.5
+E0220,R074,Fondos,3,12,7.5
+E0221,R074,Jalon al pecho,5,10,32.5
+E0222,R074,Press de banca,3,15,30
+E0223,R075,Fondos,5,8,60
+E0224,R075,Extension de triceps,3,10,20
+E0225,R075,Peso muerto,5,10,2.5
+E0226,R076,Peso muerto,5,10,40
+E0227,R076,Zancadas,5,12,2.5
+E0228,R076,Prensa de pierna,3,8,52.5
+E0229,R077,Sentadilla,4,8,40
+E0230,R077,Press militar,3,10,15
+E0231,R077,Press de banca,4,10,32.5
+E0232,R078,Jalon al pecho,4,10,42.5
+E0233,R078,Remo con barra,5,8,50
+E0234,R078,Hip thrust,3,15,5
+E0235,R079,Press de banca,4,15,2.5
+E0236,R079,Remo con barra,3,8,10
+E0237,R079,Fondos,3,15,62.5
+E0238,R080,Plancha,4,10,12.5
+E0239,R080,Dominadas,4,15,27.5
+E0240,R080,Remo con barra,3,8,17.5
+E0241,R081,Press de banca,5,8,30
+E0242,R081,Sentadilla,5,15,7.5
+E0243,R081,Jalon al pecho,3,8,12.5
+E0244,R082,Remo con barra,4,8,32.5
+E0245,R082,Prensa de pierna,5,12,2.5
+E0246,R082,Hip thrust,5,8,7.5
+E0247,R083,Press militar,4,8,0
+E0248,R083,Remo con barra,5,8,10
+E0249,R083,Press de banca,4,8,10
+E0250,R084,Peso muerto,5,8,7.5
+E0251,R084,Sentadilla,5,10,62.5
+E0252,R084,Dominadas,3,10,20
+E0253,R085,Plancha,3,10,52.5
+E0254,R085,Sentadilla,5,8,17.5
+E0255,R085,Fondos,3,8,10
+E0256,R086,Peso muerto,5,15,17.5
+E0257,R086,Remo con barra,5,15,42.5
+E0258,R086,Jalon al pecho,3,12,2.5
+E0259,R087,Press militar,4,12,20
+E0260,R087,Peso muerto,4,10,42.5
+E0261,R087,Prensa de pierna,4,8,12.5
+E0262,R088,Press militar,5,15,32.5
+E0263,R088,Prensa de pierna,3,12,40
+E0264,R088,Jalon al pecho,3,10,30
+E0265,R089,Dominadas,5,15,27.5
+E0266,R089,Sentadilla,3,15,2.5
+E0267,R089,Press militar,4,12,15
+E0268,R090,Remo con barra,5,10,32.5
+E0269,R090,Fondos,4,8,2.5
+E0270,R090,Curl de biceps,4,12,22.5
+E0271,R091,Prensa de pierna,3,10,40
+E0272,R091,Plancha,3,12,30
+E0273,R091,Press militar,3,15,30
+E0274,R092,Curl de biceps,5,15,25
+E0275,R092,Dominadas,4,12,50
+E0276,R092,Zancadas,4,10,0
+E0277,R093,Plancha,3,8,62.5
+E0278,R093,Zancadas,4,12,17.5
+E0279,R093,Peso muerto,3,8,0
+E0280,R094,Extension de triceps,5,15,30
+E0281,R094,Plancha,3,10,50
+E0282,R094,Fondos,3,8,40
+E0283,R095,Extension de triceps,3,12,20
+E0284,R095,Zancadas,4,10,2.5
+E0285,R095,Plancha,5,10,22.5
+E0286,R096,Remo con barra,4,12,32.5
+E0287,R096,Press de banca,4,10,10
+E0288,R096,Curl de biceps,3,15,42.5
+E0289,R097,Curl de biceps,3,12,7.5
+E0290,R097,Plancha,3,12,22.5
+E0291,R097,Peso muerto,5,15,40
+E0292,R098,Hip thrust,3,8,15
+E0293,R098,Dominadas,3,8,12.5
+E0294,R098,Peso muerto,5,15,52.5
+E0295,R099,Plancha,4,8,15
+E0296,R099,Peso muerto,3,10,62.5
+E0297,R099,Extension de triceps,5,15,7.5
+E0298,R100,Hip thrust,5,12,10
+E0299,R100,Peso muerto,3,15,20
+E0300,R100,Prensa de pierna,4,15,27.5
+E0301,R101,Plancha,4,8,42.5
+E0302,R101,Fondos,3,12,25
+E0303,R101,Remo con barra,4,8,32.5
+E0304,R102,Dominadas,3,12,27.5
+E0305,R102,Sentadilla,4,8,62.5
+E0306,R102,Press de banca,4,12,25
+E0307,R103,Sentadilla,4,12,7.5
+E0308,R103,Curl de biceps,5,8,0
+E0309,R103,Hip thrust,3,10,7.5
+E0310,R104,Zancadas,5,8,50
+E0311,R104,Sentadilla,4,8,62.5
+E0312,R104,Press militar,5,15,5
+E0313,R105,Press de banca,5,12,22.5
+E0314,R105,Sentadilla,4,15,7.5
+E0315,R105,Prensa de pierna,3,12,42.5
+E0316,R106,Remo con barra,5,10,5
+E0317,R106,Plancha,5,10,27.5
+E0318,R106,Hip thrust,5,8,60
+E0319,R107,Hip thrust,5,8,22.5
+E0320,R107,Press de banca,3,8,20
+E0321,R107,Fondos,3,15,15
+E0322,R108,Hip thrust,5,15,62.5
+E0323,R108,Zancadas,3,15,52.5
+E0324,R108,Prensa de pierna,4,10,22.5
+E0325,R109,Press militar,5,8,27.5
+E0326,R109,Prensa de pierna,5,8,32.5
+E0327,R109,Jalon al pecho,4,12,30
+E0328,R110,Extension de triceps,5,12,27.5
+E0329,R110,Dominadas,3,15,17.5
+E0330,R110,Peso muerto,3,12,30
+E0331,R111,Remo con barra,4,8,32.5
+E0332,R111,Dominadas,3,15,30
+E0333,R111,Curl de biceps,5,12,15
+E0334,R112,Plancha,3,8,42.5
+E0335,R112,Press de banca,4,15,42.5
+E0336,R112,Press militar,3,15,60
+E0337,R113,Fondos,5,12,7.5
+E0338,R113,Sentadilla,3,10,20
+E0339,R113,Press militar,4,12,30
+E0340,R114,Press de banca,5,12,22.5
+E0341,R114,Press militar,3,8,42.5
+E0342,R114,Remo con barra,4,15,50
+E0343,R115,Curl de biceps,4,15,32.5
+E0344,R115,Peso muerto,3,10,10
+E0345,R115,Jalon al pecho,3,12,52.5
+E0346,R116,Peso muerto,5,8,12.5
+E0347,R116,Hip thrust,5,15,62.5
+E0348,R116,Dominadas,5,8,42.5
+E0349,R117,Curl de biceps,5,15,7.5
+E0350,R117,Fondos,5,15,52.5
+E0351,R117,Press militar,4,15,27.5
+E0352,R118,Zancadas,4,12,20
+E0353,R118,Sentadilla,5,15,40
+E0354,R118,Jalon al pecho,5,15,52.5
+E0355,R119,Remo con barra,3,12,22.5
+E0356,R119,Press de banca,3,15,42.5
+E0357,R119,Zancadas,5,10,32.5
+E0358,R120,Sentadilla,3,8,60
+E0359,R120,Remo con barra,4,10,10
+E0360,R120,Peso muerto,3,12,42.5
+E0361,R121,Sentadilla,3,15,42.5
+E0362,R121,Dominadas,5,12,22.5
+E0363,R121,Fondos,4,8,0
+E0364,R122,Prensa de pierna,5,10,60
+E0365,R122,Zancadas,5,10,12.5
+E0366,R122,Plancha,3,15,22.5
+E0367,R123,Press militar,3,8,25
+E0368,R123,Remo con barra,4,15,17.5
+E0369,R123,Dominadas,4,15,22.5
+E0370,R124,Press de banca,3,10,15
+E0371,R124,Press militar,3,12,25
+E0372,R124,Curl de biceps,5,15,40
+E0373,R125,Remo con barra,4,12,20
+E0374,R125,Peso muerto,4,10,2.5
+E0375,R125,Jalon al pecho,4,10,50
+E0376,R126,Press militar,4,10,17.5
+E0377,R126,Remo con barra,5,8,50
+E0378,R126,Press de banca,5,8,22.5
+E0379,R127,Extension de triceps,4,8,27.5
+E0380,R127,Curl de biceps,4,10,40
+E0381,R127,Press militar,3,12,10
+E0382,R128,Press militar,4,12,5
+E0383,R128,Hip thrust,5,15,12.5
+E0384,R128,Peso muerto,5,12,50
+E0385,R129,Dominadas,3,10,40
+E0386,R129,Jalon al pecho,3,12,12.5
+E0387,R129,Plancha,4,12,30
+E0388,R130,Dominadas,5,10,0
+E0389,R130,Prensa de pierna,5,8,40
+E0390,R130,Press de banca,4,15,27.5
+E0391,R131,Dominadas,5,10,17.5
+E0392,R131,Curl de biceps,5,10,0
+E0393,R131,Peso muerto,3,15,27.5
+E0394,R132,Plancha,5,10,15
+E0395,R132,Extension de triceps,5,12,15
+E0396,R132,Sentadilla,4,8,30
+E0397,R133,Plancha,4,12,25
+E0398,R133,Peso muerto,4,12,50
+E0399,R133,Extension de triceps,4,12,42.5
+E0400,R134,Dominadas,5,12,25
+E0401,R134,Press de banca,5,10,60
+E0402,R134,Plancha,4,8,17.5
+E0403,R135,Press de banca,5,15,15
+E0404,R135,Hip thrust,5,10,42.5
+E0405,R135,Remo con barra,3,15,50
+E0406,R136,Dominadas,4,8,25
+E0407,R136,Curl de biceps,5,10,42.5
+E0408,R136,Fondos,3,10,25
+E0409,R137,Plancha,5,10,27.5
+E0410,R137,Extension de triceps,4,10,40
+E0411,R137,Fondos,5,15,15
+E0412,R138,Fondos,3,15,12.5
+E0413,R138,Sentadilla,4,10,12.5
+E0414,R138,Plancha,4,12,25
+E0415,R139,Remo con barra,5,8,20
+E0416,R139,Zancadas,3,8,20
+E0417,R139,Hip thrust,4,10,30
+E0418,R140,Press militar,3,10,25
+E0419,R140,Hip thrust,4,10,7.5
+E0420,R140,Extension de triceps,5,12,42.5
+E0421,R141,Curl de biceps,5,10,30
+E0422,R141,Jalon al pecho,4,8,52.5
+E0423,R141,Dominadas,5,10,50
+E0424,R142,Prensa de pierna,5,8,42.5
+E0425,R142,Peso muerto,3,8,15
+E0426,R142,Plancha,4,12,40
+E0427,R143,Zancadas,4,15,42.5
+E0428,R143,Sentadilla,4,12,42.5
+E0429,R143,Press de banca,5,10,42.5
+E0430,R144,Hip thrust,4,15,30
+E0431,R144,Extension de triceps,3,12,10
+E0432,R144,Press de banca,4,12,62.5
+E0433,R145,Jalon al pecho,3,15,50
+E0434,R145,Zancadas,4,12,22.5
+E0435,R145,Sentadilla,4,8,27.5
+E0436,R146,Curl de biceps,3,10,17.5
+E0437,R146,Prensa de pierna,4,10,32.5
+E0438,R146,Hip thrust,5,10,2.5
+E0439,R147,Press militar,5,8,5
+E0440,R147,Zancadas,3,8,40
+E0441,R147,Press de banca,3,12,20
+E0442,R148,Hip thrust,4,8,25
+E0443,R148,Jalon al pecho,3,8,32.5
+E0444,R148,Prensa de pierna,3,15,52.5
+E0445,R149,Press militar,3,8,40
+E0446,R149,Jalon al pecho,4,15,25
+E0447,R149,Hip thrust,3,15,12.5
+E0448,R150,Dominadas,4,12,7.5
+E0449,R150,Jalon al pecho,4,15,12.5
+E0450,R150,Hip thrust,3,8,5
+E0451,R151,Sentadilla,4,15,12.5
+E0452,R151,Hip thrust,5,15,17.5
+E0453,R151,Peso muerto,4,15,32.5
+E0454,R152,Plancha,4,15,15
+E0455,R152,Curl de biceps,4,12,50
+E0456,R152,Press de banca,5,12,0
+E0457,R153,Extension de triceps,5,15,22.5
+E0458,R153,Jalon al pecho,3,10,22.5
+E0459,R153,Curl de biceps,5,8,2.5
+E0460,R154,Curl de biceps,4,8,40
+E0461,R154,Press de banca,4,12,25
+E0462,R154,Fondos,4,10,62.5
+E0463,R155,Sentadilla,3,8,62.5
+E0464,R155,Peso muerto,3,15,30
+E0465,R155,Dominadas,5,15,25
+E0466,R156,Dominadas,5,8,22.5
+E0467,R156,Press de banca,3,15,30
+E0468,R156,Jalon al pecho,5,10,42.5
+E0469,R157,Sentadilla,5,15,60
+E0470,R157,Press militar,4,10,12.5
+E0471,R157,Plancha,5,10,20
+E0472,R158,Press de banca,5,8,42.5
+E0473,R158,Hip thrust,4,12,20
+E0474,R158,Curl de biceps,5,12,25
+E0475,R159,Peso muerto,4,8,20
+E0476,R159,Prensa de pierna,4,8,62.5
+E0477,R159,Hip thrust,4,8,20
+E0478,R160,Fondos,3,8,30
+E0479,R160,Press de banca,5,12,30
+E0480,R160,Curl de biceps,5,15,10
+E0481,R161,Sentadilla,3,8,17.5
+E0482,R161,Press militar,3,12,42.5
+E0483,R161,Fondos,4,10,0
+E0484,R162,Dominadas,5,15,42.5
+E0485,R162,Sentadilla,4,12,52.5
+E0486,R162,Peso muerto,5,8,0
+E0487,R163,Sentadilla,3,10,15
+E0488,R163,Fondos,3,10,2.5
+E0489,R163,Press de banca,4,12,42.5
+E0490,R164,Press de banca,4,15,12.5
+E0491,R164,Peso muerto,5,10,2.5
+E0492,R164,Remo con barra,4,10,15
+E0493,R165,Fondos,4,12,15
+E0494,R165,Prensa de pierna,4,15,0
+E0495,R165,Press de banca,3,10,5
+E0496,R166,Hip thrust,4,15,30
+E0497,R166,Sentadilla,3,8,27.5
+E0498,R166,Jalon al pecho,5,10,10
+E0499,R167,Dominadas,5,8,7.5
+E0500,R167,Sentadilla,4,12,42.5
+E0501,R167,Curl de biceps,3,10,32.5
+E0502,R168,Jalon al pecho,5,8,15
+E0503,R168,Peso muerto,3,12,30
+E0504,R168,Press militar,3,10,12.5
+E0505,R169,Extension de triceps,5,10,12.5
+E0506,R169,Hip thrust,3,15,15
+E0507,R169,Fondos,5,10,52.5
+E0508,R170,Sentadilla,4,10,22.5
+E0509,R170,Peso muerto,3,8,20
+E0510,R170,Plancha,3,10,27.5
+E0511,R171,Jalon al pecho,3,8,50
+E0512,R171,Curl de biceps,5,12,42.5
+E0513,R171,Peso muerto,3,12,15
+E0514,R172,Plancha,3,8,5
+E0515,R172,Dominadas,3,15,52.5
+E0516,R172,Extension de triceps,5,10,52.5
+E0517,R173,Press militar,5,12,32.5
+E0518,R173,Sentadilla,3,8,30
+E0519,R173,Press de banca,3,10,5
+E0520,R174,Zancadas,4,12,27.5
+E0521,R174,Fondos,5,8,62.5
+E0522,R174,Press militar,4,8,50
+E0523,R175,Sentadilla,3,12,17.5
+E0524,R175,Plancha,5,8,5
+E0525,R175,Fondos,4,8,7.5
+E0526,R176,Curl de biceps,5,10,2.5
+E0527,R176,Fondos,3,12,60
+E0528,R176,Press militar,5,8,25
+E0529,R177,Dominadas,3,8,62.5
+E0530,R177,Jalon al pecho,4,10,0
+E0531,R177,Sentadilla,3,12,32.5
+E0532,R178,Peso muerto,4,8,42.5
+E0533,R178,Sentadilla,4,8,25
+E0534,R178,Remo con barra,4,15,40
+E0535,R179,Dominadas,4,12,30
+E0536,R179,Remo con barra,5,8,0
+E0537,R179,Extension de triceps,3,8,52.5
+E0538,R180,Sentadilla,5,8,7.5
+E0539,R180,Curl de biceps,5,10,40
+E0540,R180,Prensa de pierna,3,8,40
+E0541,R181,Curl de biceps,3,10,22.5
+E0542,R181,Press de banca,5,12,60
+E0543,R181,Prensa de pierna,4,12,10
+E0544,R182,Hip thrust,3,10,60
+E0545,R182,Press de banca,3,10,32.5
+E0546,R182,Remo con barra,5,12,0
+E0547,R183,Fondos,4,10,30
+E0548,R183,Zancadas,4,15,5
+E0549,R183,Plancha,3,12,62.5
+E0550,R184,Hip thrust,4,15,62.5
+E0551,R184,Dominadas,5,8,42.5
+E0552,R184,Jalon al pecho,4,12,15
+E0553,R185,Sentadilla,3,12,42.5
+E0554,R185,Curl de biceps,4,8,60
+E0555,R185,Extension de triceps,3,10,0
+E0556,R186,Press militar,5,10,25
+E0557,R186,Dominadas,5,15,25
+E0558,R186,Prensa de pierna,4,15,40
+E0559,R187,Plancha,3,12,7.5
+E0560,R187,Press militar,5,10,50
+E0561,R187,Extension de triceps,4,15,20
+E0562,R188,Sentadilla,4,8,42.5
+E0563,R188,Remo con barra,3,10,10
+E0564,R188,Jalon al pecho,5,12,30
+E0565,R189,Remo con barra,4,12,22.5
+E0566,R189,Zancadas,3,15,52.5
+E0567,R189,Prensa de pierna,5,15,10
+E0568,R190,Dominadas,5,8,32.5
+E0569,R190,Press de banca,4,12,2.5
+E0570,R190,Zancadas,5,10,32.5
+E0571,R191,Press de banca,3,10,17.5
+E0572,R191,Jalon al pecho,5,15,25
+E0573,R191,Curl de biceps,5,15,20
+E0574,R192,Remo con barra,5,12,50
+E0575,R192,Curl de biceps,4,10,42.5
+E0576,R192,Zancadas,4,15,0
+E0577,R193,Extension de triceps,4,8,10
+E0578,R193,Press militar,4,10,62.5
+E0579,R193,Plancha,5,8,15
+E0580,R194,Curl de biceps,5,15,5
+E0581,R194,Fondos,4,10,20
+E0582,R194,Dominadas,5,12,42.5
+E0583,R195,Peso muerto,5,10,52.5
+E0584,R195,Extension de triceps,3,12,60
+E0585,R195,Jalon al pecho,5,10,12.5
+E0586,R196,Plancha,3,8,62.5
+E0587,R196,Extension de triceps,3,8,40
+E0588,R196,Remo con barra,5,10,42.5
+E0589,R197,Prensa de pierna,3,15,10
+E0590,R197,Dominadas,4,12,30
+E0591,R197,Peso muerto,3,12,17.5
+E0592,R198,Jalon al pecho,4,12,30
+E0593,R198,Plancha,3,12,27.5
+E0594,R198,Zancadas,5,12,52.5
+E0595,R199,Press militar,3,10,52.5
+E0596,R199,Hip thrust,3,15,12.5
+E0597,R199,Peso muerto,5,15,32.5
+E0598,R200,Jalon al pecho,4,8,17.5
+E0599,R200,Dominadas,3,12,60
+E0600,R200,Sentadilla,4,15,17.5
+E0601,R201,Jalon al pecho,5,8,2.5
+E0602,R201,Prensa de pierna,4,8,40
+E0603,R201,Curl de biceps,5,12,62.5
+E0604,R202,Press militar,3,15,50
+E0605,R202,Fondos,5,8,10
+E0606,R202,Dominadas,4,12,7.5
+E0607,R203,Press de banca,3,8,25
+E0608,R203,Extension de triceps,4,8,2.5
+E0609,R203,Prensa de pierna,4,8,20
+E0610,R204,Plancha,5,10,20
+E0611,R204,Remo con barra,3,8,20
+E0612,R204,Sentadilla,4,15,22.5
+E0613,R205,Press militar,4,8,40
+E0614,R205,Hip thrust,5,15,22.5
+E0615,R205,Fondos,4,10,7.5
+E0616,R206,Jalon al pecho,5,8,22.5
+E0617,R206,Prensa de pierna,3,8,12.5
+E0618,R206,Extension de triceps,4,12,5
+E0619,R207,Press de banca,4,12,2.5
+E0620,R207,Extension de triceps,4,12,25
+E0621,R207,Prensa de pierna,3,12,10
+E0622,R208,Press militar,4,8,5
+E0623,R208,Zancadas,3,12,7.5
+E0624,R208,Fondos,4,15,62.5
+E0625,R209,Fondos,3,10,32.5
+E0626,R209,Zancadas,3,15,52.5
+E0627,R209,Press militar,3,15,52.5
+E0628,R210,Plancha,5,8,15
+E0629,R210,Zancadas,4,12,50
+E0630,R210,Prensa de pierna,5,15,62.5
+E0631,R211,Sentadilla,4,15,27.5
+E0632,R211,Jalon al pecho,4,12,30
+E0633,R211,Dominadas,5,12,40
+E0634,R212,Extension de triceps,3,10,12.5
+E0635,R212,Press militar,5,12,15
+E0636,R212,Fondos,3,15,17.5
+E0637,R213,Curl de biceps,5,15,2.5
+E0638,R213,Zancadas,3,8,22.5
+E0639,R213,Hip thrust,5,8,12.5
+E0640,R214,Extension de triceps,4,15,20
+E0641,R214,Prensa de pierna,5,8,15
+E0642,R214,Press de banca,4,8,30
+E0643,R215,Press militar,5,8,15
+E0644,R215,Extension de triceps,4,8,60
+E0645,R215,Press de banca,4,10,20
+E0646,R216,Plancha,5,15,52.5
+E0647,R216,Fondos,4,8,17.5
+E0648,R216,Jalon al pecho,4,10,40
+E0649,R217,Dominadas,4,12,0
+E0650,R217,Curl de biceps,5,12,2.5
+E0651,R217,Prensa de pierna,3,10,60
+E0652,R218,Remo con barra,3,10,7.5
+E0653,R218,Plancha,3,8,27.5
+E0654,R218,Press de banca,4,15,7.5
+E0655,R219,Hip thrust,3,8,22.5
+E0656,R219,Zancadas,3,10,20
+E0657,R219,Fondos,3,8,20
+E0658,R220,Press de banca,5,10,25
+E0659,R220,Fondos,5,12,30
+E0660,R220,Curl de biceps,3,10,5
+E0661,R221,Curl de biceps,5,10,30
+E0662,R221,Hip thrust,4,8,5
+E0663,R221,Prensa de pierna,4,15,22.5
+E0664,R222,Zancadas,3,10,10
+E0665,R222,Extension de triceps,4,15,60
+E0666,R222,Dominadas,5,8,40
+E0667,R223,Press de banca,3,12,27.5
+E0668,R223,Fondos,5,15,0
+E0669,R223,Press militar,5,10,10
+E0670,R224,Remo con barra,4,12,32.5
+E0671,R224,Peso muerto,3,12,20
+E0672,R224,Jalon al pecho,5,12,20
+E0673,R225,Dominadas,3,8,7.5
+E0674,R225,Remo con barra,5,8,12.5
+E0675,R225,Press de banca,3,10,7.5
+E0676,R226,Extension de triceps,3,10,50
+E0677,R226,Zancadas,3,10,50
+E0678,R226,Dominadas,4,15,22.5
+E0679,R227,Sentadilla,3,10,10
+E0680,R227,Press de banca,5,12,60
+E0681,R227,Peso muerto,4,10,2.5
+E0682,R228,Zancadas,4,10,15
+E0683,R228,Extension de triceps,3,12,60
+E0684,R228,Hip thrust,5,12,27.5
+E0685,R229,Sentadilla,4,12,20
+E0686,R229,Extension de triceps,3,10,60
+E0687,R229,Fondos,5,12,7.5
+E0688,R230,Press militar,3,10,10
+E0689,R230,Extension de triceps,4,15,25
+E0690,R230,Prensa de pierna,4,12,30
+E0691,R231,Press militar,5,15,7.5
+E0692,R231,Fondos,5,12,2.5
+E0693,R231,Extension de triceps,3,12,30

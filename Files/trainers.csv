@@ -1,0 +1,43 @@
+id,name,lastName,email,number,username,password,role,trainerType
+T001,Sofia,Alvarado Zuniga,sofia.alvarado1@fitcr.com,82721960,trainer001,pass001,1,0
+T002,Oscar,Ulate Gonzalez,oscar.ulate2@fitcr.com,79236009,trainer002,pass002,1,1
+T003,Paola,Rojas Ulate,paola.rojas3@fitcr.com,62857850,trainer003,pass003,1,1
+T004,Diego,Morales Rojas,diego.morales4@fitcr.com,89225646,trainer004,pass004,1,1
+T005,Camila,Ramirez Quesada,camila.ramirez5@fitcr.com,76983360,trainer005,pass005,1,1
+T006,Lucia,Zuniga Arce,lucia.zuniga6@fitcr.com,66710873,trainer006,pass006,1,0
+T007,Silvia,Gonzalez Salazar,silvia.gonzalez7@fitcr.com,78674700,trainer007,pass007,1,0
+T008,Jimena,Fallas Fallas,jimena.fallas8@fitcr.com,86184138,trainer008,pass008,1,0
+T009,Rebeca,Calderon Calderon,rebeca.calderon9@fitcr.com,+506 78083634,trainer009,pass009,1,0
+T010,Melissa,Obando Hernandez,melissa.obando10@fitcr.com,89362688,trainer010,pass010,1,0
+T011,Priscilla,Zuniga Segura,priscilla.zuniga11@fitcr.com,89238128,trainer011,pass011,1,1
+T012,Andrea,Quesada Leiva,andrea.quesada12@fitcr.com,79039473,trainer012,pass012,1,0
+T013,Roberto,Chaves Navarro,roberto.chaves13@fitcr.com,61820199,trainer013,pass013,1,0
+T014,Rebeca,Ulate Castro,rebeca.ulate14@fitcr.com,73389286,trainer014,pass014,1,1
+T015,Esteban,Leiva Obando,esteban.leiva15@fitcr.com,68663770,trainer015,pass015,1,1
+T016,Rebeca,Barrantes Gonzalez,rebeca.barrantes16@fitcr.com,77745788,trainer016,pass016,1,1
+T017,Silvia,Segura Arce,silvia.segura17@fitcr.com,89034489,trainer017,pass017,1,1
+T018,Priscilla,Campos Salazar,priscilla.campos18@fitcr.com,+506 71155640,trainer018,pass018,1,0
+T019,Valeria,Arce Obando,valeria.arce19@fitcr.com,88687780,trainer019,pass019,1,1
+T020,Karla,Barrantes Campos,karla.barrantes20@fitcr.com,79146498,trainer020,pass020,1,1
+T021,Mauricio,Navarro Villalobos,mauricio.navarro21@fitcr.com,78285161,trainer021,pass021,1,0
+T022,Ricardo,Alvarado Morales,ricardo.alvarado22@fitcr.com,68355987,trainer022,pass022,1,1
+T023,Adrian,Barrantes Araya,adrian.barrantes23@fitcr.com,79038740,trainer023,pass023,1,0
+T024,Jimena,Quesada Obando,jimena.quesada24@fitcr.com,77209730,trainer024,pass024,1,0
+T025,Jorge,Montero Leiva,jorge.montero25@fitcr.com,73455491,trainer025,pass025,1,1
+T026,Jose,Vargas Rojas,jose.vargas26@fitcr.com,72393608,trainer026,pass026,1,0
+T027,Paola,Jimenez Ulate,paola.jimenez27@fitcr.com,+506 65505293,trainer027,pass027,1,1
+T028,Valeria,Rojas Alvarado,valeria.rojas28@fitcr.com,89254204,trainer028,pass028,1,0
+T029,Gustavo,Chaves Brenes,gustavo.chaves29@fitcr.com,83201443,trainer029,pass029,1,1
+T030,Laura,Castro Cordero,laura.castro30@fitcr.com,63270731,trainer030,pass030,1,1
+T031,Mauricio,Castro Ramirez,mauricio.castro31@fitcr.com,69724671,trainer031,pass031,1,0
+T032,Alonso,Rojas Jimenez,alonso.rojas32@fitcr.com,72232006,trainer032,pass032,1,0
+T033,Sebastian,Arce Calderon,sebastian.arce33@fitcr.com,61429199,trainer033,pass033,1,1
+T034,Marco,Cordero Salazar,marco.cordero34@fitcr.com,76470089,trainer034,pass034,1,0
+T035,Tatiana,Morales Hernandez,tatiana.morales35@fitcr.com,83864434,trainer035,pass035,1,0
+T036,Alejandra,Zuniga Campos,alejandra.zuniga36@fitcr.com,+506 76644171,trainer036,pass036,1,1
+T037,Oscar,Chaves Cordero,oscar.chaves37@fitcr.com,82166158,trainer037,pass037,1,1
+T038,Carlos,Campos Arce,carlos.campos38@fitcr.com,61758944,trainer038,pass038,1,0
+T039,Adrian,Leiva Navarro,adrian.leiva39@fitcr.com,84162996,trainer039,pass039,1,1
+T040,Rebeca,Cordero Obando,rebeca.cordero40@fitcr.com,63166605,trainer040,pass040,1,0
+T041,Andrea,Obando Solano,andrea.obando41@fitcr.com,64120649,trainer041,pass041,1,1
+T042,Fernanda,Castro Gonzalez,fernanda.castro42@fitcr.com,72319675,trainer042,pass042,1,1
