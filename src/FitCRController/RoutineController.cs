@@ -1,20 +1,17 @@
 using FitCRModels;
-using System.Globalization;
 
 namespace FitCRController
 {
     /// <summary>Controller for the routines, their exercises and the increases made to them.</summary>
-    public class RoutineController
+    public class RoutineController : BaseController
     {
+        private readonly NotificationController notificationController;
+
         public RoutineController(InformationService informationService, NotificationController notificationController)
+            : base(informationService)
         {
-            this.InformationService = informationService;
-            this.NotificationController = notificationController;
+            this.notificationController = notificationController;
         }
-
-        public InformationService InformationService { get; set; }
-
-        public NotificationController NotificationController { get; set; }
 
         /// <summary>Gets the routines of a user, from the newest to the oldest.</summary>
         public List<Routine> GetRoutines(string userId)
@@ -25,13 +22,11 @@ namespace FitCRController
                 .ToList();
         }
 
-        /// <summary>Gets the last routines of a user.</summary>
         public List<Routine> GetLastRoutines(string userId, int count = 5)
         {
             return this.GetRoutines(userId).Take(count).ToList();
         }
 
-        /// <summary>Gets the exercises of a routine.</summary>
         public List<Exercise> GetExercises(string routineId)
         {
             return this.InformationService.Exercises.Where(e => e.RoutineId == routineId).ToList();
@@ -47,7 +42,7 @@ namespace FitCRController
                 .ToList();
         }
 
-        /// <summary>Adds a routine for a user.</summary>
+        /// <summary>Adds a routine for a user. If it succeded, the identifier of the new routine is in the result.</summary>
         public OperationResult AddRoutine(string trainerId, string userId, DateTime startDate, DateTime endDate)
         {
             if (!this.InformationService.Trainers.Any(t => t.Id == trainerId))
@@ -65,10 +60,10 @@ namespace FitCRController
                 return OperationResult.Fail("The end date cannot be before the start date.");
             }
 
-            var id = this.InformationService.GenerateId("R", this.InformationService.Routines.Select(r => r.Id), 3);
-            this.InformationService.Routines.Add(new Routine(id, userId, trainerId, FormatDate(startDate), FormatDate(endDate)));
+            var id = IdGenerator.Next("R", this.InformationService.Routines.Select(r => r.Id), 3);
+            this.InformationService.Routines.Add(new Routine(id, userId, trainerId, CsvFormat.Date(startDate), CsvFormat.Date(endDate)));
             this.InformationService.Save(this.InformationService.Routines);
-            this.NotificationController.Add(userId, "Nueva rutina agregada");
+            this.notificationController.Add(userId, "Nueva rutina agregada");
             return OperationResult.Ok("Routine added.", id);
         }
 
@@ -108,7 +103,7 @@ namespace FitCRController
             return OperationResult.Ok("Routine deleted.");
         }
 
-        /// <summary>Adds an exercise to a routine.</summary>
+        /// <summary>Adds an exercise to a routine. If it succeded, the identifier of the new exercise is in the result.</summary>
         public OperationResult AddExercise(string routineId, string name, int sets, int repetitions, double weight)
         {
             if (!this.InformationService.Routines.Any(r => r.Id == routineId))
@@ -116,21 +111,14 @@ namespace FitCRController
                 return OperationResult.Fail("The routine does not exist.");
             }
 
-            var error = this.ValidateExercise(name, sets, repetitions, weight);
+            var error = ValidateExercise(name, sets, repetitions, weight);
             if (error != null)
             {
                 return OperationResult.Fail(error);
             }
 
-            var id = this.InformationService.GenerateId("E", this.InformationService.Exercises.Select(e => e.Id), 4);
-            this.InformationService.Exercises.Add(new Exercise(
-                id,
-                routineId,
-                name.Trim(),
-                sets.ToString(CultureInfo.InvariantCulture),
-                repetitions.ToString(CultureInfo.InvariantCulture),
-                weight.ToString(CultureInfo.InvariantCulture)));
-
+            var id = IdGenerator.Next("E", this.InformationService.Exercises.Select(e => e.Id), 4);
+            this.InformationService.Exercises.Add(new Exercise(id, routineId, name.Trim(), CsvFormat.Number(sets), CsvFormat.Number(repetitions), CsvFormat.Number(weight)));
             this.InformationService.Save(this.InformationService.Exercises);
             return OperationResult.Ok("Exercise added.", id);
         }
@@ -144,7 +132,7 @@ namespace FitCRController
                 return OperationResult.Fail("The exercise does not exist.");
             }
 
-            var error = this.ValidateExercise(exercise.Name, sets, repetitions, weight);
+            var error = ValidateExercise(exercise.Name, sets, repetitions, weight);
             if (error != null)
             {
                 return OperationResult.Fail(error);
@@ -176,14 +164,9 @@ namespace FitCRController
             return OperationResult.Ok("Exercise deleted.");
         }
 
-        private static string FormatDate(DateTime date)
+        private static string? ValidateExercise(string name, int sets, int repetitions, double weight)
         {
-            return date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
-        }
-
-        private string? ValidateExercise(string name, int sets, int repetitions, double weight)
-        {
-            if (string.IsNullOrWhiteSpace(name) || name.Contains(','))
+            if (string.IsNullOrWhiteSpace(name) || Validation.HasComma(name))
             {
                 return "The name is required and cannot contain commas.";
             }
@@ -198,14 +181,14 @@ namespace FitCRController
 
         private void RecordIncrease(Exercise exercise, double newWeight)
         {
-            var id = this.InformationService.GenerateId("I", this.InformationService.RoutineIncreases.Select(i => i.Id), 3);
+            var id = IdGenerator.Next("I", this.InformationService.RoutineIncreases.Select(i => i.Id), 3);
             this.InformationService.RoutineIncreases.Add(new RoutineIncrease(
                 id,
                 exercise.RoutineId,
                 exercise.Id,
-                FormatDate(DateTime.Today),
-                exercise.Weight.ToString(CultureInfo.InvariantCulture),
-                newWeight.ToString(CultureInfo.InvariantCulture)));
+                CsvFormat.Date(DateTime.Today),
+                CsvFormat.Number(exercise.Weight),
+                CsvFormat.Number(newWeight)));
 
             this.InformationService.Save(this.InformationService.RoutineIncreases);
         }
