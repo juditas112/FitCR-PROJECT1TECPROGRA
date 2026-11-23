@@ -131,7 +131,7 @@ E0129,R043,Zancadas,3,12,32.5
 E0130,R044,Zancadas,4,8,15
 E0131,R044,Press militar,3,8,15
 E0132,R044,Jalon al pecho,3,12,62.5
-E0133,R045,Press de banca,5,8,20
+E0133,R045,Press de banca,20,100,500
 E0134,R045,Hip thrust,3,15,15
 E0135,R045,Plancha,5,8,5
 E0136,R046,Jalon al pecho,3,10,40
@@ -317,12 +317,6 @@ E0315,R105,Prensa de pierna,3,12,42.5
 E0316,R106,Remo con barra,5,10,5
 E0317,R106,Plancha,5,10,27.5
 E0318,R106,Hip thrust,5,8,60
-E0319,R107,Hip thrust,5,8,22.5
-E0320,R107,Press de banca,3,8,20
-E0321,R107,Fondos,3,15,15
-E0322,R108,Hip thrust,5,15,62.5
-E0323,R108,Zancadas,3,15,52.5
-E0324,R108,Prensa de pierna,4,10,22.5
 E0325,R109,Press militar,5,8,27.5
 E0326,R109,Prensa de pierna,5,8,32.5
 E0327,R109,Jalon al pecho,4,12,30
@@ -692,3 +686,6 @@ E0690,R230,Prensa de pierna,4,12,30
 E0691,R231,Press militar,5,15,7.5
 E0692,R231,Fondos,5,12,2.5
 E0693,R231,Extension de triceps,3,12,30
+E0694,R045,Press de banca,20,100,500
+E0695,R045,jalon de pecho,20,100,500
+E0696,R232,dominadas,3,10,2
