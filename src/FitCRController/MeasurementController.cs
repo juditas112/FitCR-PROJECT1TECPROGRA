@@ -25,6 +25,12 @@ namespace FitCRController
         /// <summary>Adds a measurement. If it is the newest one the weight of the user is updated, and then the goals are checked.</summary>
         public OperationResult AddMeasurement(string userId, DateTime date, double weight, double bodyFat, double muscleMass)
         {
+            var notAllowed = this.EnsureTrainer();
+            if (notAllowed != null)
+            {
+                return notAllowed;
+            }
+
             var user = this.InformationService.Users.FirstOrDefault(u => u.Id == userId);
             if (user == null)
             {

@@ -32,6 +32,11 @@ namespace FitCRController
             return this.InformationService.Exercises.Where(e => e.RoutineId == routineId).ToList();
         }
 
+        public string GetExerciseName(string exerciseId)
+        {
+            return this.InformationService.Exercises.FirstOrDefault(e => e.Id == exerciseId)?.Name ?? exerciseId;
+        }
+
         /// <summary>Gets all the increases made in the routines of a user, from the newest to the oldest.</summary>
         public List<RoutineIncrease> GetIncreases(string userId)
         {
@@ -45,6 +50,12 @@ namespace FitCRController
         /// <summary>Adds a routine for a user. If it succeded, the identifier of the new routine is in the result.</summary>
         public OperationResult AddRoutine(string trainerId, string userId, DateTime startDate, DateTime endDate)
         {
+            var notAllowed = this.EnsureTrainer();
+            if (notAllowed != null)
+            {
+                return notAllowed;
+            }
+
             if (!this.InformationService.Trainers.Any(t => t.Id == trainerId))
             {
                 return OperationResult.Fail("The trainer does not exist.");
@@ -70,6 +81,12 @@ namespace FitCRController
         /// <summary>Changes the dates of a routine.</summary>
         public OperationResult UpdateRoutine(string routineId, DateTime startDate, DateTime endDate)
         {
+            var notAllowed = this.EnsureTrainer();
+            if (notAllowed != null)
+            {
+                return notAllowed;
+            }
+
             var routine = this.InformationService.Routines.FirstOrDefault(r => r.Id == routineId);
             if (routine == null)
             {
@@ -90,6 +107,12 @@ namespace FitCRController
         /// <summary>Deletes a routine with its exercises and its increases.</summary>
         public OperationResult DeleteRoutine(string routineId)
         {
+            var notAllowed = this.EnsureTrainer();
+            if (notAllowed != null)
+            {
+                return notAllowed;
+            }
+
             if (this.InformationService.Routines.RemoveAll(r => r.Id == routineId) == 0)
             {
                 return OperationResult.Fail("The routine does not exist.");
@@ -106,6 +129,12 @@ namespace FitCRController
         /// <summary>Adds an exercise to a routine. If it succeded, the identifier of the new exercise is in the result.</summary>
         public OperationResult AddExercise(string routineId, string name, int sets, int repetitions, double weight)
         {
+            var notAllowed = this.EnsureTrainer();
+            if (notAllowed != null)
+            {
+                return notAllowed;
+            }
+
             if (!this.InformationService.Routines.Any(r => r.Id == routineId))
             {
                 return OperationResult.Fail("The routine does not exist.");
@@ -126,6 +155,12 @@ namespace FitCRController
         /// <summary>Changes an exercise. If the new weight is higher than the old one, the increase is recorded.</summary>
         public OperationResult UpdateExercise(string exerciseId, int sets, int repetitions, double weight)
         {
+            var notAllowed = this.EnsureTrainer();
+            if (notAllowed != null)
+            {
+                return notAllowed;
+            }
+
             var exercise = this.InformationService.Exercises.FirstOrDefault(e => e.Id == exerciseId);
             if (exercise == null)
             {
@@ -153,6 +188,12 @@ namespace FitCRController
         /// <summary>Deletes an exercise with its increases.</summary>
         public OperationResult DeleteExercise(string exerciseId)
         {
+            var notAllowed = this.EnsureTrainer();
+            if (notAllowed != null)
+            {
+                return notAllowed;
+            }
+
             if (this.InformationService.Exercises.RemoveAll(e => e.Id == exerciseId) == 0)
             {
                 return OperationResult.Fail("The exercise does not exist.");

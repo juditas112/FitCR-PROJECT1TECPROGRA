@@ -48,27 +48,6 @@ namespace FitCRController
             return OperationResult.Ok("User registered.", id);
         }
 
-        /// <summary>Updates the weight and the height of a user. The BMI is calculated again by the user itself.</summary>
-        public OperationResult UpdateProfile(string userId, double weight, double height)
-        {
-            var user = this.GetUser(userId);
-            if (user == null)
-            {
-                return OperationResult.Fail("The user does not exist.");
-            }
-
-            var error = ValidateBody(weight, height);
-            if (error != null)
-            {
-                return OperationResult.Fail(error);
-            }
-
-            user.Weight = weight;
-            user.Height = height;
-            this.InformationService.Save(this.InformationService.Users);
-            return OperationResult.Ok("Profile updated.");
-        }
-
         public BasicUser? GetUser(string userId)
         {
             return this.InformationService.Users.FirstOrDefault(u => u.Id == userId);
