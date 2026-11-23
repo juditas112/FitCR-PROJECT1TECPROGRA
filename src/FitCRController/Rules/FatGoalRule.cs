@@ -9,6 +9,8 @@ namespace FitCRController.Rules
     {
         public GoalType GoalType => GoalType.Fat;
 
+        public string DisplayName => "Grasa corporal (%)";
+
         public string BadgeName => "Meta de grasa cumplida";
 
         public bool IsReached(Goal goal, InformationService informationService)

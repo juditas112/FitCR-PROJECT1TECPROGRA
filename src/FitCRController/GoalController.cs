@@ -26,6 +26,17 @@ namespace FitCRController
                 .ToList();
         }
 
+        /// <summary>Gets the types of goal that can be created, with the name to show.</summary>
+        public List<KeyValuePair<GoalType, string>> GetGoalTypes()
+        {
+            return this.rules.Select(rule => new KeyValuePair<GoalType, string>(rule.GoalType, rule.DisplayName)).ToList();
+        }
+
+        public string GetGoalTypeName(GoalType type)
+        {
+            return this.GetRule(type)?.DisplayName ?? type.ToString();
+        }
+
         /// <summary>Adds a goal for a user.</summary>
         public OperationResult AddGoal(string userId, GoalType type, double targetValue, DateTime deadline)
         {

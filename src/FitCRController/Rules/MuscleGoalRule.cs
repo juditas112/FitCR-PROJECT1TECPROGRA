@@ -9,6 +9,8 @@ namespace FitCRController.Rules
     {
         public GoalType GoalType => GoalType.Muscle;
 
+        public string DisplayName => "Musculatura (kg)";
+
         public string BadgeName => "Meta de musculatura cumplida";
 
         public bool IsReached(Goal goal, InformationService informationService)

@@ -8,6 +8,8 @@ namespace FitCRController.Abstractions
     {
         public GoalType GoalType { get; }
 
+        public string DisplayName { get; }
+
         public string BadgeName { get; }
 
         public bool IsReached(Goal goal, InformationService informationService);

@@ -9,6 +9,8 @@ namespace FitCRController.Rules
     {
         public GoalType GoalType => GoalType.Visits;
 
+        public string DisplayName => "Visitas al gimnasio";
+
         public string BadgeName => "Meta de visitas cumplida";
 
         public bool IsReached(Goal goal, InformationService informationService)
