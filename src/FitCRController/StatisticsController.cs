@@ -52,6 +52,32 @@ namespace FitCRController
             return summary;
         }
 
+        /// <summary>Gets the measurements of a user in a range of dates, from the oldest to the newest.</summary>
+        public List<Measurement> GetMeasurementsInRange(string userId, DateTime from, DateTime to)
+        {
+            return this.InformationService.Measurements
+                .Where(m => m.UserId == userId && m.Date.Date >= from.Date && m.Date.Date <= to.Date)
+                .OrderBy(m => m.Date)
+                .ToList();
+        }
+
+        /// <summary>Gets how many visits a user had in each week of a range of dates. The key is the Monday of the week.</summary>
+        public List<KeyValuePair<DateTime, int>> GetWeeklyVisits(string userId, DateTime from, DateTime to)
+        {
+            var visits = this.InformationService.Visits
+                .Where(v => v.UserId == userId && v.Date.Date >= from.Date && v.Date.Date <= to.Date)
+                .ToList();
+            var weeks = new List<KeyValuePair<DateTime, int>>();
+
+            for (var start = StartOfWeek(from); start <= to.Date; start = start.AddDays(7))
+            {
+                var end = start.AddDays(7);
+                weeks.Add(new KeyValuePair<DateTime, int>(start, visits.Count(v => v.Date.Date >= start && v.Date.Date < end)));
+            }
+
+            return weeks;
+        }
+
         /// <summary>Gets the 10 users with the most visits in a range of dates.</summary>
         public List<RankingEntry> GetTopVisitors(DateTime from, DateTime to)
         {
@@ -70,6 +96,11 @@ namespace FitCRController
                 .ThenBy(r => r.User.Id)
                 .Take(RankingSize)
                 .ToList();
+        }
+
+        private static DateTime StartOfWeek(DateTime date)
+        {
+            return date.Date.AddDays(-(((int)date.DayOfWeek + 6) % 7));
         }
 
         private List<RankingEntry> BuildRanking(DateTime from, DateTime to)
