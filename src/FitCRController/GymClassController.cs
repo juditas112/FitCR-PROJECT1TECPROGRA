@@ -6,6 +6,8 @@ namespace FitCRController
     /// <summary>Controller for the classes offered by the gym.</summary>
     public class GymClassController : BaseController
     {
+        private static readonly string[] DaysOfWeek = { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" };
+
         private static readonly Dictionary<GymClassType, string> ClassNames = new Dictionary<GymClassType, string>
         {
             { GymClassType.Yoga, "Yoga" },
@@ -31,7 +33,8 @@ namespace FitCRController
         {
             return this.InformationService.GymClasses
                 .OrderBy(c => c.ClassType)
-                .ThenBy(c => c.Schedule)
+                .ThenBy(c => Array.IndexOf(DaysOfWeek, c.Day))
+                .ThenBy(c => c.StartTime)
                 .ToList();
         }
 

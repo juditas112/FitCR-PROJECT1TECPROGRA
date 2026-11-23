@@ -10,6 +10,11 @@ namespace FitCRController
             return date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
         }
 
+        public static string DateAndTime(DateTime dateTime)
+        {
+            return dateTime.ToString("yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture);
+        }
+
         public static string Number(double value)
         {
             return value.ToString(CultureInfo.InvariantCulture);

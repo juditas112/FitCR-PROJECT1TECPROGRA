@@ -37,14 +37,15 @@ namespace FitCRController
                 return OperationResult.Fail("The user does not exist.");
             }
 
-            var today = DateTime.Today;
+            var now = DateTime.Now;
+            var today = now.Date;
             if (this.InformationService.Visits.Any(v => v.UserId == userId && v.Date.Date == today))
             {
                 return OperationResult.Fail("The visit of today was already registered.");
             }
 
             var id = IdGenerator.Next("V", this.InformationService.Visits.Select(v => v.Id), 4);
-            this.InformationService.Visits.Add(new Visit(id, userId, CsvFormat.Date(today)));
+            this.InformationService.Visits.Add(new Visit(id, userId, CsvFormat.DateAndTime(now)));
             this.InformationService.Save(this.InformationService.Visits);
 
             this.NotifyRestIfNeeded(userId, today);
