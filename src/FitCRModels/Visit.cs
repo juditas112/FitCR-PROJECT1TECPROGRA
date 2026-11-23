@@ -20,7 +20,7 @@ namespace FitCRModels
 
         public override string ToString()
         {
-            return string.Join(",", new object[] { this.Id, this.UserId, this.Date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture) });
+            return string.Join(",", new object[] { this.Id, this.UserId, this.Date.ToString("yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture) });
         }
     }
 }
