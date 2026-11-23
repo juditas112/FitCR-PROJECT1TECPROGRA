@@ -1,16 +1,15 @@
-namespace FitCR;
+using FitCRController;
 
-static class Program
+namespace FitCR
 {
-    /// <summary>
-    ///  The main entry point for the application.
-    /// </summary>
-    [STAThread]
-    static void Main()
+    internal static class Program
     {
-        // To customize application configuration such as set high DPI settings or default font,
-        // see https://aka.ms/applicationconfiguration.
-        ApplicationConfiguration.Initialize();
-        Application.Run(new Form1());
-    }    
+        [STAThread]
+        private static void Main()
+        {
+            ApplicationConfiguration.Initialize();
+            var controllers = new ControllerContainer(new FileHandler());
+            Application.Run(new LoginView(controllers));
+        }
+    }
 }
